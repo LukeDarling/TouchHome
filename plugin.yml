@@ -1,0 +1,70 @@
+name: TouchHome
+main: LDX\TouchHome\Main
+version: 2.0
+api: [1.1.0]
+load: POSTWORLD
+author: LDX
+commands:
+ home:
+  description: "Teleports you to your home."
+  usage: "/home"
+  permission: touchhome.command.home
+ sethome:
+  description: "Sets your home."
+  usage: "/sethome"
+  permission: touchhome.command.sethome
+ delhome:
+  description: "Deletes your home."
+  usage: "/delhome"
+  permission: touchhome.command.delhome
+permissions:
+ touchhome:
+  default: op
+  description: "Allows access to all TouchHome features."
+  children:
+   touchhome.command:
+    default: op
+    description: "Allows access to all TouchHome commands."
+    children:
+     touchhome.command.home:
+      default: true
+      description: "Allows access to the home command."
+     touchhome.command.sethome:
+      default: true
+      description: "Allows access to the sethome command."
+     touchhome.command.delhome:
+      default: true
+      description: "Allows access to the delhome command."
+   touchhome.home:
+    default: op
+    description: "Allows access to all home features."
+    children:
+     touchhome.home.self:
+      default: true
+      description: "Allows access to your own home."
+     touchhome.home.others:
+      default: op
+      description: "Allows access to other's homes."
+     touchhome.home.touch:
+      default: true
+      description: "Allows access to the touch home feature."
+   touchhome.sethome:
+    default: op
+    description: "Allows access to all sethome features."
+    children:
+     touchhome.sethome.self:
+      default: true
+      description: "Allows access to setting your own home."
+     touchhome.sethome.others:
+      default: op
+      description: "Allows access to setting other's homes."
+   touchhome.delhome:
+    default: op
+    description: "Allows access to all delhome features."
+    children:
+     touchhome.delhome.self:
+      default: true
+      description: "Allows access to delete your own home."
+     touchhome.delhome.others:
+      default: op
+      description: "Allows access to delete other's homes."

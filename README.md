@@ -1,4 +1,0 @@
-TouchHome
-=========
-
-A PocketMine plugin

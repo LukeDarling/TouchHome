@@ -1,0 +1,4 @@
+# Config file for TouchHome by LDX;
+
+# The item that players can use to go to their home; Default: Compass (ID: 345)
+item: 345

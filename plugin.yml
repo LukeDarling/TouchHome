@@ -4,6 +4,7 @@ version: 2.0
 api: [1.1.0]
 load: POSTWORLD
 author: LDX
+website: https://github.com/LDX-MCPE/TouchHome
 commands:
   home:
     description: "Teleports you to your home."
